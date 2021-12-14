@@ -1,16 +1,25 @@
 package myPackage;
 
-public class DossierBancaire {
+public class DossierBancaire 
+{
+	
+	private Compte compteC; //compte Courant
 	
 	//Constructeur
     public DossierBancaire()
     {
-    	m_solde=0;
+    	compteC = new Compte(0);
     }
 
-    public void deposer(double value) {m_solde+=value;}
-    public double get_solde() {return m_solde;}
+    public void depot(double value)
+    {
+    	compteC.addSolde(value);
+    }
+    
+    public double getSoldeTotal()
+    {
+    	return compteC.getSolde();
+    }
+    
     public void remunerer() {}
-	
-    private double m_solde;
 }

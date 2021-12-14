@@ -13,7 +13,7 @@ public class TestsDossierBancaire
 	private DossierBancaire dossier;
 	
 	@Before
-	public void setup()
+	public void setUp() throws Exception
 	{
 		dossier = new DossierBancaire();
 	}
@@ -22,21 +22,21 @@ public class TestsDossierBancaire
 	@Test  
 	public void testDepot() 
 	{
-		double s = dossier.get_solde();
-		dossier.deposer(100);
-		assertEquals(s + 100, dossier.get_solde(), 0); //voir documentation en ligne sur assertions Junit 
+		double s = dossier.getSoldeTotal();
+		dossier.depot(100);
+		assertEquals(s + 100, dossier.getSoldeTotal(), 0); //voir documentation en ligne sur assertions Junit 
 	}
 	
 	@Test
 	public void testGetSolde()
 	{
-		dossier.deposer(100);
-		assertEquals(100, dossier.get_solde(), 0);
+		dossier.depot(100);
+		assertEquals(100, dossier.getSoldeTotal(), 0);
 	}
 	
 	@Test
 	public void testConstructeur()
 	{
-		assertEquals(0, dossier.get_solde(), 0);
+		assertEquals(0, dossier.getSoldeTotal(), 0);
 	}
 }
