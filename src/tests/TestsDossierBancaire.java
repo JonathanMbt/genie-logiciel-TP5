@@ -39,4 +39,12 @@ public class TestsDossierBancaire
 	{
 		assertEquals(0, dossier.getSoldeTotal(), 0);
 	}
+	
+	@Test
+	public void testRemunerer()
+	{
+		dossier.depot(100);
+		dossier.remunerer();
+		assertEquals(0.6*100*1.032+0.4*100, dossier.getSoldeTotal(), 0);
+	}
 }
