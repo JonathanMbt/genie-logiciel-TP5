@@ -17,6 +17,8 @@ public class GUI  implements ActionListener
 	private JTextField m_saisie_depot;
 	private JTextField m_display_solde;
 	private JButton m_remunerer;
+	private JButton m_retrait;
+
 	// Constructeur
     public GUI(DossierBancaire d)
     {
@@ -30,6 +32,10 @@ public class GUI  implements ActionListener
         //Element declenchement remuneration
         m_remunerer = new JButton("OK");
         m_remunerer.addActionListener(this);
+        
+        //Element declenchement retrait
+        m_retrait = new JButton("OK");
+        m_retrait.addActionListener(this);
 
         
     	//Element affichage solde
@@ -42,12 +48,14 @@ public class GUI  implements ActionListener
         JFrame frame = new JFrame("Editeur dossier bancaire");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Geometrie de repartition des elements graphiques
-        frame.setLayout(new GridLayout(3,2)); //3 lignes and 2 columns
+        frame.setLayout(new GridLayout(4,2)); //3 lignes and 2 columns
         //First line
         frame.getContentPane().add(new JLabel("Depot"));
         frame.getContentPane().add(m_saisie_depot);
         frame.getContentPane().add(new JLabel("Remunerer"));
-        frame.getContentPane().add(m_remunerer);        
+        frame.getContentPane().add(m_remunerer);          
+        frame.getContentPane().add(new JLabel("Retrait"));
+        frame.getContentPane().add(m_retrait);        
         frame.getContentPane().add(new JLabel("Solde"));
         frame.getContentPane().add(m_display_solde);
         frame.pack(); //Causes this Window to be sized to fit the preferred size and layouts of its subcomponents.
@@ -66,6 +74,13 @@ public class GUI  implements ActionListener
     	if( e.getSource() == m_remunerer )
     	{
     		m_dossier.remunerer();
+    	}
+    	
+    	if( e.getSource() == m_retrait )
+    	{
+    		float depot_value=Float.parseFloat(m_saisie_depot.getText());
+    		m_dossier.retrait(depot_value);
+    		m_saisie_depot.setText("");
     	}
     	m_display_solde.setText(Double.toString(m_dossier.getSoldeTotal()));  	
     }
