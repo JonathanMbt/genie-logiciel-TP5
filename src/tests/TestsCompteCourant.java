@@ -31,14 +31,27 @@ public class TestsCompteCourant {
 	}
 	
 	@Test
-	public void testRetrait()
+	public void testRetraitImpossible()
 	{
-		try {
+		try 
+		{
 			c.retrait(10);
-		
+			fail("Devrait throw une exception étant donné que le solde devient négatif.");
+		}catch(Exception e) {
+				assert(e.getMessage().contains("Vous n'avez pas l'argent nécessaire pour effectuer ce retrait."));
+		}	
+	}
+	
+	@Test
+	public void testRetraitPossible()
+	{
+		c.addSolde(100);
+		try 
+		{
+			c.retrait(10);
+			assertEquals(90, c.getSolde(), 0);
 		}catch(Exception e) {
 			fail(e.getMessage());
-			
 		}	
 	}
 	

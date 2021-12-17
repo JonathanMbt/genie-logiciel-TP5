@@ -15,7 +15,7 @@ public class CompteCourant extends Compte{
 			setSolde(getSolde()-s);
 			
 		}else {
-			throw new Exception("T'as pas la thune gars");
+			throw new Exception("Vous n'avez pas l'argent nécessaire pour effectuer ce retrait.");
 		}
 		
 		
