@@ -25,7 +25,7 @@ public class DossierBancaire
     	return compteC.getSolde() + compteE.getSolde();
     }
     
-    public void remunerer()
+    public void remunerer() // appel à la fonction rémunérer uniquement présente dans la classe CompteEpargne
     {
     	compteE.remunerer();
     }
