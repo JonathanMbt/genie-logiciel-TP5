@@ -5,7 +5,6 @@ public class DossierBancaire
 	
 	private CompteCourant compteC; //compte Courant
 	private CompteEpargne compteE; //compte Epargne
-
 	
 	//Constructeur
     public DossierBancaire()
@@ -21,7 +20,12 @@ public class DossierBancaire
     }
     public void retrait(double value)
     {
-    	compteC.retrait(value);
+    	try {
+    		compteC.retrait(value);
+    	}catch(Exception e) {
+    		
+    		e.printStackTrace();
+    	}
     }
     public double getSoldeTotal()
     {
@@ -32,5 +36,6 @@ public class DossierBancaire
     {
     	compteE.remunerer();
     }
+    
     
 }

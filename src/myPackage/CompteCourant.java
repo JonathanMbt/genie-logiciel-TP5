@@ -7,16 +7,17 @@ public class CompteCourant extends Compte{
 		super(s);
 	}
 	
-	public boolean retrait(double s)
+	public void retrait(double s) throws Exception
 	{
-		boolean error=false;
+		
 		if(getSolde()-s>0) {
 			
 			setSolde(getSolde()-s);
 			
-		}else {error=true;
+		}else {
+			throw new Exception("T'as pas la thune gars");
 		}
-		return error;
+		
 		
 	}
 	
