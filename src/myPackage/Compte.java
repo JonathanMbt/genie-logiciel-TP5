@@ -1,6 +1,6 @@
 package myPackage;
 
-public class Compte 
+abstract class Compte 
 {
 	
 	private double solde;
@@ -18,6 +18,10 @@ public class Compte
 	public double getSolde()
 	{
 		return solde;
+	}
+	public void setSolde(double s)
+	{
+		solde = s;
 	}
 	
 }

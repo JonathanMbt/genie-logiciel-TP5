@@ -3,14 +3,14 @@ package myPackage;
 public class DossierBancaire 
 {
 	
-	private Compte compteC; //compte Courant
+	private CompteCourant compteC; //compte Courant
 	private CompteEpargne compteE; //compte Epargne
 
 	
 	//Constructeur
     public DossierBancaire()
     {
-    	compteC = new Compte(0);
+    	compteC = new CompteCourant(0);
     	compteE = new CompteEpargne(0);
     }
 
@@ -19,7 +19,10 @@ public class DossierBancaire
     	compteC.addSolde(0.4 * value);
     	compteE.addSolde(0.6 * value);
     }
-    
+    public void retrait(double value)
+    {
+    	compteC.retrait(value);
+    }
     public double getSoldeTotal()
     {
     	return compteC.getSolde() + compteE.getSolde();
@@ -29,4 +32,5 @@ public class DossierBancaire
     {
     	compteE.remunerer();
     }
+    
 }
