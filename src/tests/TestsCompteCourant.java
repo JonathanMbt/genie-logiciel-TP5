@@ -31,6 +31,18 @@ public class TestsCompteCourant {
 	}
 	
 	@Test
+	public void testRetrait()
+	{
+		try {
+			c.retrait(10);
+		
+		}catch(Exception e) {
+			fail(e.getMessage());
+			
+		}	
+	}
+	
+	@Test
 	public void testGetSolde()
 	{
 		double s = c.getSolde();
