@@ -10,7 +10,7 @@ public class CompteEpargne extends Compte
 	
 	public void remunerer()
 	{
-		addSolde(0.032 * getSolde());
+		addSolde(0.032 * getSolde()); // 3.2% d'intérêts fixé par le cahier des charges
 	}
 
 }
