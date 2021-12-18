@@ -15,8 +15,8 @@ public class DossierBancaire
 
     public void depot(double value)
     {
-    	compteC.addSolde(0.4 * value); // 40% reversé sur le compte courant
-    	compteE.addSolde(0.6 * value); // 60% reversé sur le compte épargne
+    	compteC.addSolde(0.4 * value); // 40% reverse sur le compte courant
+    	compteE.addSolde(0.6 * value); // 60% reverse sur le compte epargne
     }
     public void retrait(double value)
     {
@@ -32,7 +32,7 @@ public class DossierBancaire
     	return compteC.getSolde() + compteE.getSolde();
     }
     
-    public void remunerer()// appel à la fonction rémunérer uniquement présente dans la classe CompteEpargne
+    public void remunerer()// appel a la fonction remunerer uniquement presente dans la classe CompteEpargne
     {
     	compteE.remunerer();
     }
