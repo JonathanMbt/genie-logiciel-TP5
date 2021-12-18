@@ -36,9 +36,9 @@ public class TestsCompteCourant {
 		try 
 		{
 			c.retrait(10);
-			fail("Devrait throw une exception étant donné que le solde devient négatif.");
+			fail("Devrait throw une exception etant donne que le solde devient negatif.");
 		}catch(Exception e) {
-				assert(e.getMessage().contains("Vous n'avez pas l'argent nécessaire pour effectuer ce retrait."));
+				assert(e.getMessage().contains("Vous n'avez pas l'argent necessaire pour effectuer ce retrait."));
 		}	
 	}
 	
