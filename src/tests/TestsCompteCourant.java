@@ -13,7 +13,7 @@ public class TestsCompteCourant {
 	private CompteCourant c;
 	
 	@Before
-	public void setUp() throws Exception {
+	public void setUp(){
 		c = new CompteCourant(0);
 	}
 

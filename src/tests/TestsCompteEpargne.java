@@ -12,7 +12,7 @@ public class TestsCompteEpargne {
 	private CompteEpargne ce;
 
 	@Before
-	public void setUp() throws Exception 
+	public void setUp()
 	{
 		ce = new CompteEpargne(0);
 	}

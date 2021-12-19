@@ -13,7 +13,7 @@ public class TestsDossierBancaire
 	private DossierBancaire dossier;
 	
 	@Before
-	public void setUp() throws Exception
+	public void setUp()
 	{
 		dossier = new DossierBancaire();
 	}
