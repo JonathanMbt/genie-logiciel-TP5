@@ -1,4 +1,4 @@
-# RemindME
+# TP - Intégration des compétences
 
 TP Intégration des compétences dans le cadre du cours de Génie Logiciel (Polytech Angers, M. Delanoue).
 
